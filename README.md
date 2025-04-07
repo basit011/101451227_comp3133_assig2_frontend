@@ -31,45 +31,27 @@ Technologies Used
 
 Project Structure
 
-|-- src/
-|   |-- app/
-|   |   |-- core/
-|   |   |   |-- guards/
-|   |   |   |   └── auth.guard.ts              # Authentication guard
-|   |   |   |-- services/
-|   |   |   |   ├── auth.service.ts            # Authentication service
-|   |   |   |   └── employee.service.ts        # Employee service
-|   |   |
-|   |   |-- features/
-|   |   |   |-- auth/
-|   |   |   |   ├── login/
-|   |   |   |   |   ├── login.component.ts
-|   |   |   |   |   ├── login.component.html
-|   |   |   |   |   └── login.component.scss
-|   |   |   |   ├── signup/
-|   |   |   |   |   ├── signup.component.ts
-|   |   |   |   |   ├── signup.component.html
-|   |   |   |   |   └── signup.component.scss
-|   |   |
-|   |   |   |-- employee/
-|   |   |   |   ├── list/
-|   |   |   |   |   ├── list.component.ts
-|   |   |   |   |   ├── list.component.html
-|   |   |   |   |   └── list.component.scss
-|   |   |   |   ├── view/
-|   |   |   |   |   ├── view.component.ts
-|   |   |   |   |   ├── view.component.html
-|   |   |   |   |   └── view.component.scss
-|   |   |   |   ├── add/
-|   |   |   |   |   ├── add.component.ts
-|   |   |   |   |   ├── add.component.html
-|   |   |   |   |   └── add.component.scss
-|   |   |   |   ├── edit/
-|   |   |   |   |   ├── edit.component.ts
-|   |   |   |   |   ├── edit.component.html
-|   |   |   |   |   └── edit.component.scss
-|   |
-|   |-- graphql
+
+src/
+│
+├── app/
+│   │
+│   ├── core/
+│   │   ├── guards/
+│   │   └── services/
+│   │
+│   ├── features/
+│   │   ├── auth/
+│   │   │   ├── login/
+│   │   │   └── signup/
+│   │   │
+│   │   └── employee/
+│   │       ├── list/
+│   │       ├── view/
+│   │       ├── add/
+│   │       └── edit/
+│   │
+└── graphql/
 
 
 Installation
