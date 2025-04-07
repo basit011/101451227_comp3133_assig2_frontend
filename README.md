@@ -7,7 +7,7 @@ Features
 
     Employee CRUD operations
 
-    Add employee 
+    Add employee
 
     Filter and search employees
 
@@ -31,38 +31,31 @@ Technologies Used
 
 Project Structure
 
-
 src/
-
 
 │
 ├── app/
 
+│ │
+│ ├── core/
+│ │ ├── guards/
+│ │ └── services/
 
-│   │
-│   ├── core/
-│   │   ├── guards/
-│   │   └── services/
+│ │
+│ ├── features/
+│ │ ├── auth/
+│ │ │ ├── login/
+│ │ │ └── signup/
 
+│ │ │
+│ │ └── employee/
+│ │ ├── list/
+│ │ ├── view/
+│ │ ├── add/
+│ │ └── edit/
 
-│   │
-│   ├── features/
-│   │   ├── auth/
-│   │   │   ├── login/
-│   │   │   └── signup/
-
-
-│   │   │
-│   │   └── employee/
-│   │       ├── list/
-│   │       ├── view/
-│   │       ├── add/
-│   │       └── edit/
-
-
-│   │
+│ │
 └── graphql/
-
 
 Installation
 Prerequisites
@@ -71,20 +64,19 @@ Prerequisites
 
     Angular CLI (npm install -g @angular/cli)
 
-    Employee Management API (backend) running    
-
+    Employee Management API (backend) running
 
 Steps
 
     Clone the repository:
-      
+
 
     git clone <repo-url>
     cd <frontend-folder>
 
     Install dependencies:
-    
-    npm install   
+
+    npm install
 
     Start the development server:
 
@@ -94,8 +86,6 @@ Steps
     Copy
 
     http://localhost:4200
-
-
 
 Usage
 
@@ -138,13 +128,13 @@ Auth Feature
 
     signup.component - User registration form
 
- Authentication
+Authentication
 
     Signup: Create a new account
 
     Login: Access the system with your credentials
 
- Employee Management
+Employee Management
 
     View All Employees: See the complete list of employees
 
@@ -174,7 +164,6 @@ The frontend communicates with the following GraphQL endpoints:
 
         deleteEmployee
 
-
 License
 
-Distributed under Basit Ali. Contact me for more information.        
+Distributed under Basit Ali. Contact me for more information.
