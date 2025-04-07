@@ -31,9 +31,7 @@ Technologies Used
 
 Project Structure
 
-
-<pre> <code> src/ │ ├── app/ │ │ │ ├── core/ │ │ ├── guards/ # Route guards (e.g., AuthGuard) │ │ ├── services/ # Core services (AuthService, EmployeeService, etc.) │ │ │ ├── features/ │ │ ├── auth/ # Authentication module │ │ │ ├── login/ # Login component (login.component.ts, .html, .scss) │ │ │ ├── signup/ # Signup component (signup.component.ts, .html, .scss) │ │ │ │ ├── employee/ # Employee features │ │ │ ├── list/ # Employee list view │ │ │ ├── view/ # Employee detail view │ │ │ ├── add/ # Add employee form │ │ │ ├── edit/ # Edit employee form │ │ │ ├── graphql/ # GraphQL-related files (queries, mutations, services) </code> </pre>
-
+<pre lang="nohighlight"><code>``` src/ │ ├── app/ │ │ │ ├── core/ │ │ ├── guards/ # Route guards (e.g., AuthGuard) │ │ ├── services/ # Core services (AuthService, EmployeeService, etc.) │ │ │ ├── features/ │ │ ├── auth/ # Authentication module │ │ │ ├── login/ # Login component (login.component.ts, .html, .scss) │ │ │ ├── signup/ # Signup component (signup.component.ts, .html, .scss) │ │ │ │ ├── employee/ # Employee features │ │ │ ├── list/ # Employee list view │ │ │ ├── view/ # Employee detail view │ │ │ ├── add/ # Add employee form │ │ │ ├── edit/ # Edit employee form │ │ │ ├── graphql/ # GraphQL-related files (queries, mutations, services) ```</code></pre>
 
 Installation
 Prerequisites
