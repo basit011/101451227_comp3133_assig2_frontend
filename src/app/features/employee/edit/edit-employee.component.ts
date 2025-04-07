@@ -86,31 +86,6 @@ export class EditEmployeeComponent implements OnInit {
       },
     });
   }
-
-  // onSubmit() {
-  //   this.loading = true;
-  //   this.error = '';
-
-  //   const updateData = {
-  //     ...this.employee,
-  //     date_of_joining: new Date(this.employee.date_of_joining).toISOString(),
-  //   };
-
-  //   this.employeeService
-  //     .updateEmployee(this.employee._id, updateData)
-  //     .subscribe({
-  //       next: () => {
-  //         this.router.navigate(['/employees', this.employee._id]);
-  //       },
-  //       error: (err) => {
-  //         this.error = err.message || 'Failed to update employee';
-  //         this.loading = false;
-  //       },
-  //     });
-  // }
-
-  //
-
  
    onSubmit() {
   this.loading = true;
