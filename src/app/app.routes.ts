@@ -40,7 +40,7 @@ export const routes: Routes = [
   },
 
   {
-    path: 'employees/view/:id',
+    path: 'employees/view',
     loadComponent: () =>
       import('./features/employee/view/view-employee.component').then(
         (m) => m.ViewEmployeeComponent
@@ -48,7 +48,7 @@ export const routes: Routes = [
     canActivate: [authGuard],
   },
   {
-    path: 'employees/edit/:id',
+    path: 'employees/edit',
     loadComponent: () =>
       import('./features/employee/edit/edit-employee.component').then(
         (m) => m.EditEmployeeComponent
