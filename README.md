@@ -31,27 +31,45 @@ Technologies Used
 
 Project Structure
 
-
-src/
-│
-├── app/
-│   │
-│   ├── core/
-│   │   ├── guards/              # Route guards (e.g., AuthGuard)
-│   │   ├── services/            # Core services (AuthService, EmployeeService, etc.)
-│   │
-│   ├── features/
-│   │   ├── auth/                # Authentication module
-│   │   │   ├── login/           # Login component (login.component.ts, .html, .scss)
-│   │   │   ├── signup/          # Signup component (signup.component.ts, .html, .scss)
-│   │
-│   │   ├── employee/            # Employee features
-│   │   │   ├── list/            # Employee list view
-│   │   │   ├── view/            # Employee detail view
-│   │   │   ├── add/             # Add employee form
-│   │   │   ├── edit/            # Edit employee form
-│   │
-│   ├── graphql/                 # GraphQL-related files (queries, mutations, services)
+|-- src/
+|   |-- app/
+|   |   |-- core/
+|   |   |   |-- guards/
+|   |   |   |   └── auth.guard.ts              # Authentication guard
+|   |   |   |-- services/
+|   |   |   |   ├── auth.service.ts            # Authentication service
+|   |   |   |   └── employee.service.ts        # Employee service
+|   |   |
+|   |   |-- features/
+|   |   |   |-- auth/
+|   |   |   |   ├── login/
+|   |   |   |   |   ├── login.component.ts
+|   |   |   |   |   ├── login.component.html
+|   |   |   |   |   └── login.component.scss
+|   |   |   |   ├── signup/
+|   |   |   |   |   ├── signup.component.ts
+|   |   |   |   |   ├── signup.component.html
+|   |   |   |   |   └── signup.component.scss
+|   |   |
+|   |   |   |-- employee/
+|   |   |   |   ├── list/
+|   |   |   |   |   ├── list.component.ts
+|   |   |   |   |   ├── list.component.html
+|   |   |   |   |   └── list.component.scss
+|   |   |   |   ├── view/
+|   |   |   |   |   ├── view.component.ts
+|   |   |   |   |   ├── view.component.html
+|   |   |   |   |   └── view.component.scss
+|   |   |   |   ├── add/
+|   |   |   |   |   ├── add.component.ts
+|   |   |   |   |   ├── add.component.html
+|   |   |   |   |   └── add.component.scss
+|   |   |   |   ├── edit/
+|   |   |   |   |   ├── edit.component.ts
+|   |   |   |   |   ├── edit.component.html
+|   |   |   |   |   └── edit.component.scss
+|   |
+|   |-- graphql
 
 
 Installation
