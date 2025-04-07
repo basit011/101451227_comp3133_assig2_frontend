@@ -30,21 +30,30 @@ Technologies Used
     TypeScript
 
 Project Structure
-    src/
-    |-- app/
-    |   |-- core/
-    |   |   |-- guards/          # Authentication guards
-    |   |   |-- services/        # Core services (Auth, Employee)
-    |   |-- features/
-    |   |   |-- auth/            # Authentication components (login, signup)
-    |   |   |-- employee/        # Employee management components
-    |   |   |   |-- list/        # Employee list view
-    |   |   |   |-- view/        # Employee detail view
-    |   |   |   |-- add/         # Add employee form
-    |   |   |   |-- edit/        # Edit employee form
-    |   |-- shared/              # Shared modules, components, and utilities
-    |-- assets/                  # Static assets (images, styles)
-    |-- environments/            # Environment configurations   
+
+
+src/
+│
+├── app/
+│   │
+│   ├── core/
+│   │   ├── guards/              # Route guards (e.g., AuthGuard)
+│   │   ├── services/            # Core services (AuthService, EmployeeService, etc.)
+│   │
+│   ├── features/
+│   │   ├── auth/                # Authentication module
+│   │   │   ├── login/           # Login component (login.component.ts, .html, .scss)
+│   │   │   ├── signup/          # Signup component (signup.component.ts, .html, .scss)
+│   │
+│   │   ├── employee/            # Employee features
+│   │   │   ├── list/            # Employee list view
+│   │   │   ├── view/            # Employee detail view
+│   │   │   ├── add/             # Add employee form
+│   │   │   ├── edit/            # Edit employee form
+│   │
+│   ├── graphql/                 # GraphQL-related files (queries, mutations, services)
+
+
 
 Installation
 Prerequisites
