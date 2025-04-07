@@ -33,23 +33,33 @@ Project Structure
 
 
 src/
+
+
 │
 ├── app/
+
+
 │   │
 │   ├── core/
 │   │   ├── guards/
 │   │   └── services/
+
+
 │   │
 │   ├── features/
 │   │   ├── auth/
 │   │   │   ├── login/
 │   │   │   └── signup/
+
+
 │   │   │
 │   │   └── employee/
 │   │       ├── list/
 │   │       ├── view/
 │   │       ├── add/
 │   │       └── edit/
+
+
 │   │
 └── graphql/
 
