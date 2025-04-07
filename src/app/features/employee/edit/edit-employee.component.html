@@ -1,0 +1,192 @@
+<!-- <div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Edit Employee</mat-card-title>
+      <mat-card-subtitle>{{ employee.first_name }} {{ employee.last_name }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form #employeeForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input matInput name="first_name" [(ngModel)]="employee.first_name" required>
+            <mat-error>First name is required</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input matInput name="last_name" [(ngModel)]="employee.last_name" required>
+            <mat-error>Last name is required</mat-error>
+          </mat-form-field>
+        </div>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" name="email" [(ngModel)]="employee.email" required email>
+          <mat-error>Valid email is required</mat-error>
+        </mat-form-field>
+
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Gender</mat-label>
+            <mat-select name="gender" [(ngModel)]="employee.gender">
+              <mat-option *ngFor="let gender of genders" [value]="gender">
+                {{ gender }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Designation</mat-label>
+            <mat-select name="designation" [(ngModel)]="employee.designation" required>
+              <mat-option *ngFor="let designation of designations" [value]="designation">
+                {{ designation }}
+              </mat-option>
+            </mat-select>
+            <mat-error>Designation is required</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Salary</mat-label>
+            <input matInput type="number" name="salary" [(ngModel)]="employee.salary" required min="1000">
+            <mat-error>Salary must be at least 1000</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Date of Joining</mat-label>
+            <input matInput [matDatepicker]="picker" name="date_of_joining" 
+                   [(ngModel)]="employee.date_of_joining" required>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error>Date is required</mat-error>
+          </mat-form-field>
+        </div>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Department</mat-label>
+          <mat-select name="department" [(ngModel)]="employee.department" required>
+            <mat-option *ngFor="let department of departments" [value]="department">
+              {{ department }}
+            </mat-option>
+          </mat-select>
+          <mat-error>Department is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Employee Photo URL</mat-label>
+          <input matInput name="employee_photo" [(ngModel)]="employee.employee_photo">
+        </mat-form-field>
+
+        <div class="form-actions">
+          <button mat-raised-button color="primary" type="submit" [disabled]="loading || !employeeForm.valid">
+            <mat-icon>save</mat-icon> {{ loading ? 'Saving...' : 'Save' }}
+          </button>
+          <button mat-raised-button type="button" [routerLink]="['/employees', employee._id]">
+            <mat-icon>cancel</mat-icon> Cancel
+          </button>
+        </div>
+
+        <div class="error" *ngIf="error">{{ error }}</div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div> -->
+
+
+<div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Edit Employee</mat-card-title>
+      <mat-card-subtitle>{{ employee.first_name }} {{ employee.last_name }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form #employeeForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input matInput name="first_name" [(ngModel)]="employee.first_name" required>
+            <mat-error>First name is required</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input matInput name="last_name" [(ngModel)]="employee.last_name" required>
+            <mat-error>Last name is required</mat-error>
+          </mat-form-field>
+        </div>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" name="email" [(ngModel)]="employee.email" required email>
+          <mat-error>Valid email is required</mat-error>
+        </mat-form-field>
+
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Gender</mat-label>
+            <mat-select name="gender" [(ngModel)]="employee.gender">
+              <mat-option *ngFor="let gender of genders" [value]="gender">
+                {{ gender }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Designation</mat-label>
+            <mat-select name="designation" [(ngModel)]="employee.designation" required>
+              <mat-option *ngFor="let designation of designations" [value]="designation">
+                {{ designation }}
+              </mat-option>
+            </mat-select>
+            <mat-error>Designation is required</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Salary</mat-label>
+            <input matInput type="number" name="salary" [(ngModel)]="employee.salary" required min="1000">
+            <mat-error>Salary must be at least 1000</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Date of Joining</mat-label>
+            <input matInput [matDatepicker]="picker" name="date_of_joining" 
+                   [(ngModel)]="employee.date_of_joining" >
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error>Date is required</mat-error>
+          </mat-form-field>
+        </div>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Department</mat-label>
+          <mat-select name="department" [(ngModel)]="employee.department" >
+            <mat-option *ngFor="let department of departments" [value]="department">
+              {{ department }}
+            </mat-option>
+          </mat-select>
+          <!-- <mat-error>Department is required</mat-error> -->
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Employee Photo URL</mat-label>
+          <input matInput name="employee_photo" [(ngModel)]="employee.employee_photo">
+        </mat-form-field>
+
+        <div class="form-actions">
+          <button mat-raised-button color="primary" type="submit" [disabled]="loading || !employeeForm.valid">
+            <mat-icon>save</mat-icon> {{ loading ? 'Saving...' : 'Save' }}
+          </button>
+          <button mat-raised-button type="button" [routerLink]="['/employees', employee._id]">
+            <mat-icon>cancel</mat-icon> Cancel
+          </button>
+        </div>
+
+        <div class="error" *ngIf="error">{{ error }}</div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,159 @@
+/* Container styling */
+.container {
+  padding: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Card styling */
+mat-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #3f51b5; /* Accent border */
+}
+
+mat-card-header {
+  background-color: #f5f5f5;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+mat-card-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #424242;
+}
+
+mat-card-subtitle {
+  font-size: 16px;
+  color: #616161;
+  margin-top: 4px;
+}
+
+mat-card-content {
+  padding: 24px;
+}
+
+/* List styling */
+mat-list {
+  padding: 0;
+}
+
+mat-list-item {
+  height: 64px !important; /* Increased height for better spacing */
+}
+
+span[matListItemTitle] {
+  font-weight: 500;
+  color: #424242;
+  font-size: 14px;
+}
+
+span[matListItemLine] {
+  color: #616161;
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+mat-divider {
+  margin: 4px 0;
+}
+
+/* Photo container */
+.photo-container {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.employee-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styling - Enhanced for details view */
+mat-card-actions {
+  display: flex;
+  gap: 16px;
+  padding: 16px 24px;
+  border-top: 1px solid #e0e0e0;
+  background-color: #fafafa;
+}
+
+button[mat-raised-button] {
+  min-width: 120px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+button[mat-raised-button][color="primary"] {
+  background-color: #3f51b5;
+  color: white;
+}
+
+button[mat-raised-button][color="primary"]:hover {
+  background-color: #303f9f;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(63, 81, 181, 0.3);
+}
+
+button[mat-raised-button]:not([color="primary"]) {
+  border: 1px solid #e0e0e0;
+  background-color: white;
+  color: #424242;
+}
+
+button[mat-raised-button]:not([color="primary"]):hover {
+  background-color: #f5f5f5;
+  transform: translateY(-2px);
+}
+
+/* Loading spinner */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+mat-spinner {
+  stroke: #3f51b5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .container {
+    padding: 16px;
+  }
+
+  mat-card-actions {
+    flex-direction: column;
+  }
+
+  button[mat-raised-button] {
+    width: 100%;
+  }
+
+  .employee-photo {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Animation for photo */
+.employee-photo {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.employee-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="background"></div>
+  <mat-card class="form">
+    <mat-card-header>
+      <mat-card-title class="title">Register</mat-card-title>
+      <mat-card-subtitle class="title-message">Signup now to get access to app.</mat-card-subtitle>
+    </mat-card-header>
+    
+    <mat-card-content>
+      <form #signupForm="ngForm" (ngSubmit)="onSubmit()" class="signup-form">
+        <div class="row">
+          <mat-form-field appearance="fill" class="half-width">
+            <mat-label>Username</mat-label>
+            <input matInput
+                   type="text"
+                   name="username"
+                   [(ngModel)]="credentials.username"
+                   required
+                   autocomplete="username">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="half-width">
+            <mat-label>Email</mat-label>
+            <input matInput
+                   type="email"
+                   name="email"
+                   [(ngModel)]="credentials.email"
+                   required
+                   email
+                   autocomplete="email">
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Password</mat-label>
+            <input matInput
+                   type="password"
+                   name="password"
+                   [(ngModel)]="credentials.password"
+                   required
+                   minlength="6"
+                   autocomplete="new-password">
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Confirm Password</mat-label>
+            <input matInput
+                   type="password"
+                   name="confirmPassword"
+                   [(ngModel)]="credentials.confirmPassword"
+                   required
+                   autocomplete="new-password">
+          </mat-form-field>
+        </div>
+
+        <button mat-raised-button
+                color="primary"
+                type="submit"
+                class="submit-button"
+                [disabled]="loading || !signupForm.valid">
+          {{ loading ? 'Creating account...' : 'Register' }}
+        </button>
+
+        <p class="sign-in">
+          Already have an account?
+          <a mat-button color="primary" routerLink="/login">Login here</a>
+        </p>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

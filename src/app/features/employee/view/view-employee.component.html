@@ -1,0 +1,62 @@
+<div class="container">
+  <mat-card *ngIf="employee">
+    <mat-card-header>
+      <mat-card-title>Employee Details</mat-card-title>
+      <mat-card-subtitle>{{ employee.first_name }} {{ employee.last_name }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>
+          <span matListItemTitle>Email</span>
+          <span matListItemLine>{{ employee.email }}</span>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        
+        <mat-list-item>
+          <span matListItemTitle>Gender</span>
+          <span matListItemLine>{{ employee.gender }}</span>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        
+        <mat-list-item>
+          <span matListItemTitle>Designation</span>
+          <span matListItemLine>{{ employee.designation }}</span>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        
+        <mat-list-item>
+          <span matListItemTitle>Salary</span>
+          <span matListItemLine>{{ employee.salary | currency }}</span>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        
+        <mat-list-item>
+          <span matListItemTitle>Date of Joining</span>
+          <span matListItemLine>{{ employee.date_of_joining | date }}</span>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        
+        <mat-list-item>
+          <span matListItemTitle>Department</span>
+          <span matListItemLine>{{ employee.department }}</span>
+        </mat-list-item>
+      </mat-list>
+
+      <div *ngIf="employee.employee_photo" class="photo-container">
+        <img [src]="employee.employee_photo" alt="Employee Photo" class="employee-photo">
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="editEmployee()">
+        <mat-icon>edit</mat-icon> Edit
+      </button>
+      <button mat-raised-button (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon> Back
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
+  <div *ngIf="loading" class="loading-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="main-login">
+  <!-- Left Section with Image -->
+  <div class="left-login">
+    <h1>Login<br>And join our team</h1>
+    <img src="https://i.postimg.cc/YC13sX2Z/Astronaut-cuate.png" 
+         class="left-login-img" 
+         alt="astronaut image">
+  </div>
+
+  <!-- Right Section with Login Form -->
+  <div class="right-login">
+    <div class="card-login">
+      <h1>Login</h1>
+      
+      <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+        
+        <div class="textfield">
+          <label for="email">Email</label>
+          <input matInput 
+                type="email" 
+                name="email" 
+                [(ngModel)]="credentials.email" 
+                required 
+                email
+                placeholder="Enter your email">
+        </div>
+
+        <!-- Password Field -->
+        <div class="textfield">
+          <label for="password">Password</label>
+          <input matInput 
+                type="password" 
+                name="password" 
+                [(ngModel)]="credentials.password" 
+                required 
+                minlength="6"
+                placeholder="Enter your password">
+        </div>
+
+        <!-- Login Button -->
+        <button mat-raised-button 
+                class="btn-login" 
+                type="submit"
+                [disabled]="loading || !loginForm.valid">
+          {{ loading ? 'Logging in...' : 'Login' }}
+        </button>
+      </form>
+
+      <div class="signup-link">
+        <a mat-button routerLink="/signup">Create an account</a>
+      </div>
+    </div>
+  </div>
+</div>
